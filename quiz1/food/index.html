@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 .dark-mode .w3-white {
   background-color: #1e1e1e !important;
   color: #f1f1f1 !important;
-  border-bottom: 1px solid #333; /* Menambahkan garis batas agar navbar terlihat */
+  border-bottom: 1px solid #333;
 }
 
 .dark-mode .w3-text-grey {
@@ -147,13 +147,10 @@ function toggleDarkMode() {
   if (!document.body.classList.contains('dark-mode')) {
     newTheme = 'dark';
   }
-  // Simpan pilihan tema di localStorage
   localStorage.setItem('theme', newTheme);
-  // Terapkan tema yang baru
   applyTheme(newTheme);
 }
 
-// Cek apakah pengguna sudah punya pilihan tema saat halaman dimuat
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme') || 'light';
   applyTheme(savedTheme);
