@@ -147,7 +147,6 @@ function toggleDarkMode() {
   if (!document.body.classList.contains('dark-mode')) {
     newTheme = 'dark';
   }
-  // Simpan pilihan tema di localStorage
   localStorage.setItem('theme', newTheme);
   applyTheme(newTheme);
 }
