@@ -1,0 +1,196 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quiz 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+    
+    /* Dark mode styles */
+    .dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    .dark-mode h1,
+    .dark-mode h2,
+    .dark-mode h3,
+    .dark-mode h4,
+    .dark-mode h5,
+    .dark-mode h6 {
+  color: #f1f1f1;
+}
+
+    .dark-mode .w3-light-grey {
+      background-color: #1e1e1e !important;
+    }
+    .dark-mode .w3-black {
+      background-color: #000000 !important;
+    }
+    .dark-mode .w3-text-grey {
+      color: #b3b3b3 !important;
+    }
+    .dark-mode .w3-red, .dark-mode .w3-hover-red:hover {
+      background-color: #262626 !important;
+      color: #f1f1f1 !important;
+    }   
+    .dark-mode .w3-text-red {
+      color: #a4a4a4 !important;
+    }
+    .dark-mode .w3-button.w3-black {
+      background-color: #333 !important;
+      color: #f1f1f1 !important;
+    }
+    </style>
+  </head>
+<body>
+
+<!-- Dark Mode Toggle -->
+<button onclick="toggleDarkMode()" class="w3-button w3-round-xxlarge w3-black w3-margin-top w3-right" style="position:fixed; right:20px; top:70px; z-index:1000;">
+  <i id="darkModeIcon" class="fa fa-moon-o"></i>
+</button>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="./profile/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Profile</a>
+    <a href="./hometown/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Hometown</a>
+    <a href="./food/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Local Food</a>
+    <a href="./tourist/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Tourist Place</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="./profile/" class="w3-bar-item w3-button w3-padding-large">Profile</a>
+    <a href="./hometown/" class="w3-bar-item w3-button w3-padding-large">Hometown</a>
+    <a href="./food/" class="w3-bar-item w3-button w3-padding-large">Local Food</a>
+    <a href="./tourist/" class="w3-bar-item w3-button w3-padding-large">Tourist Place</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">Hi! Welcome to my website for Quiz 1</h1>
+  <p class="w3-xlarge">Love from Indonesia</p>
+  <button id="getStartedBtn" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+</header>
+
+<!-- First Grid -->
+<div id="aboutSection" class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>About</h1>
+      <h5 class="w3-padding-32">Hello! I'm Akhdan from ITS. The website you're viewing is a project I created for my Web Programming Quiz 1.</h5>
+
+      <p class="w3-text-grey">For me, building a website is more than just an assignment; it's a canvas for exploration. Through this project, I challenged myself to learn and grow. This site is a reflection of my learning journey—showcasing what I can do now and where my passion will take me next</p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Brief History</h1>
+      <h5 class="w3-padding-32">My journey into web development began long before my formal studies. It started back in junior high school when, fueled by a shared dream with my friends, I took my first shot at building a website. The goal was ambitious: to create a platform for us as aspiring content creators.</h5>
+
+      <p class="w3-text-grey">While our content creator careers didn't quite take off, the experience of creating that simple, single-page website was incredibly exciting. That project ignited my passion for building things on the web and taught me that the process itself can be just as rewarding as the final outcome—a lesson that still drives me today.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: Jangan lupa bernapas</h1>
+</div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity"> 
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>This website was made with W3schools Spaces. Make your own free website today!</p>
+ <a class="w3-button w3-round-xxlarge w3-black w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+ <!-- Footer end. -->
+ </footer>
+
+<script>
+  // --- FUNGSI UNTUK SMOOTH SCROLL ---
+document.getElementById('getStartedBtn').addEventListener('click', function() {
+  document.getElementById('aboutSection').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
+// --- FUNGSI DARK MODE YANG SUDAH DIPERBAIKI & DITINGKATKAN ---
+
+const darkModeToggle = document.querySelector('#darkModeIcon');
+const body = document.body;
+
+// Fungsi untuk menerapkan tema (gelap atau terang)
+const applyTheme = (theme) => {
+  if (theme === 'dark') {
+    body.classList.add('dark-mode');
+    darkModeIcon.classList.remove('fa-moon-o');
+    darkModeIcon.classList.add('fa-sun-o');
+  } else {
+    body.classList.remove('dark-mode');
+    darkModeIcon.classList.remove('fa-sun-o');
+    darkModeIcon.classList.add('fa-moon-o');
+  }
+};
+
+// Fungsi utama yang dipanggil saat tombol diklik
+function toggleDarkMode() {
+  let newTheme = 'light';
+  if (!body.classList.contains('dark-mode')) {
+    newTheme = 'dark';
+  }
+  
+  // Simpan pilihan tema di localStorage
+  localStorage.setItem('theme', newTheme);
+  
+  // Terapkan tema yang baru
+  applyTheme(newTheme);
+}
+
+// Cek apakah pengguna sudah punya pilihan tema saat halaman dimuat
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light'; // Default ke 'light' jika tidak ada
+  applyTheme(savedTheme);
+});
+
+
+// --- FUNGSI NAVIGASI BAWAAN ANDA (TIDAK PERLU DIUBAH) ---
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
