@@ -142,7 +142,6 @@ document.getElementById('getStartedBtn').addEventListener('click', function() {
     behavior: 'smooth'
   });
 });
-// --- FUNGSI DARK MODE YANG SUDAH DIPERBAIKI & DITINGKATKAN ---
 
 const darkModeToggle = document.querySelector('#darkModeIcon');
 const body = document.body;
@@ -160,28 +159,21 @@ const applyTheme = (theme) => {
   }
 };
 
-// Fungsi utama yang dipanggil saat tombol diklik
 function toggleDarkMode() {
   let newTheme = 'light';
   if (!body.classList.contains('dark-mode')) {
     newTheme = 'dark';
   }
   
-  // Simpan pilihan tema di localStorage
   localStorage.setItem('theme', newTheme);
-  
-  // Terapkan tema yang baru
   applyTheme(newTheme);
 }
 
-// Cek apakah pengguna sudah punya pilihan tema saat halaman dimuat
 document.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme') || 'light'; // Default ke 'light' jika tidak ada
+  const savedTheme = localStorage.getItem('theme') || 'light';
   applyTheme(savedTheme);
 });
 
-
-// --- FUNGSI NAVIGASI BAWAAN ANDA (TIDAK PERLU DIUBAH) ---
 function myFunction() {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
