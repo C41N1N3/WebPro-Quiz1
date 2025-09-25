@@ -1,0 +1,163 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Local Food</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  html {
+  scroll-behavior: smooth;
+}
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #f1f1f1;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .w3-bar,
+.dark-mode .w3-card,
+.dark-mode .w3-white {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border-bottom: 1px solid #333; /* Menambahkan garis batas agar navbar terlihat */
+}
+
+.dark-mode .w3-text-grey {
+    color: #b3b3b3 !important;
+}
+
+.dark-mode .w3-light-grey {
+  background-color: #121212 !important;
+}
+
+.dark-mode img {
+  filter: brightness(85%);
+  transition: filter 0.3s ease;
+}
+</style>
+</head>
+<body>
+<button onclick="toggleDarkMode()" class="w3-button w3-round-xxlarge w3-black w3-margin-top w3-left" style="position:fixed; left:20px; top:40px; z-index:1000;">
+  <i id="darkModeIcon" class="fa fa-moon-o"></i>
+</button>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="../" class="w3-bar-item w3-button">Local Food</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Recipe</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKOFWYFu5NyTJYaFxOmulEQ_nFJE7_roEkgQ&s" alt="Gami Bawis" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Gami Bawis</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOty2UyY9rx851lfdgfsY-aIngCferHrfAHA&s" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Gami Bawis</h1><br>
+      <h5 class="w3-center">For tourists visiting Bontang, their visit is incomplete if they don't try gami bawis.</h5>
+      <p class="w3-large">Anjungan Restaurant is a culinary destination known for its signature dish, Gami Bawis. The owner, Haji Ghalib, has been serving this specialty for approximately 10 years and explains its origins. He recounts that initially, "gami" was simply a term for a chili sauce served as an accompaniment to various dishes like fish, chicken, and even vegetables.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">In the world of cuisine, the most beloved dishes often tell a story—a story of heritage, innovation, and community. Anjungan Restaurant’s Gami Bawis stands as a prime example of this culinary narrative. Through the vision of its creator, Haji Ghalib, this dish evolved from a simple, traditional chili sauce into an iconic dining experience, demonstrating a unique fusion of cultural history and inventive preparation. The journey of Gami Bawis began not in a bustling commercial kitchen, but as a humble family staple. For Haji Ghalib, Gami sauce was simply "the chili sauce we had with every family meal." He saw potential in this familiar taste, envisioning a new life for the inexpensive and often overlooked local Bawis fish, which was typically just served dried or in a basic red paste. This vision led to an experiment that would ultimately define his restaurant. The creation of Gami Bawis was a risk, but Ghalib’s belief in it was unwavering. He dedicated two years to promoting the dish, even offering free servings to every customer to introduce them to his creation. This dedication paid off, transforming Gami Bawis from an unknown specialty into the restaurant’s celebrated centerpiece. While Haji Ghalib’s spirit of innovation brought Gami Bawis to the public, the dish itself is firmly rooted in the culinary traditions of East Kalimantan. The sauce, Sambal Gami, has long been a staple for the people of Bontang Kuala, considered an essential part of any meal. As Ghalib puts it, "eating without sambal just isn't satisfying." Its historical form was simple, often made with just tomatoes, shallots, and chili, and sometimes served with cassava. Ghalib did not invent Gami; rather, he honored its history by using it as the foundation for something new, connecting his modern dish to the generations who came before. Beyond its rich history and Ghalib's ingenuity, the true distinction of Gami Bawis lies in its unique preparation—a method that engages the senses. The dish is cooked and served in a traditional clay mortar, or cobek. Raw Bawis fish is combined with the sambal ingredients and then placed directly on a stovetop, allowing the sauce to bubble and cook the fish right before the diner's eyes. This technique ensures the fish is only semi-cooked, preserving its fresh flavor. The clay mortar itself is indispensable. "Cooking it in the clay mortar is essential," Ghalib explained. "It gives the dish a uniquely fragrant aroma that you can't get otherwise." In conclusion, Gami Bawis is far more than just a popular dish; it is a story served in a sizzling clay bowl. It represents a perfect marriage of personal innovation, deep-seated cultural heritage, and a distinctive culinary technique. Through Haji Ghalib's efforts, a simple family sauce was elevated, an underappreciated local fish was given a new identity, and a traditional cooking method became a signature spectacle. The success of Gami Bawis is a testament to how a simple dish, when reimagined with creativity and respect for tradition, can become a celebrated cultural icon.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Recipe</h1><br>
+      <h4>Ingredients</h4>
+      <p class="w3-text-grey">2 pcs Bawis Fish, cleaned</p>
+      <p class="w3-text-grey">1 pcs Tomato, sliced</p>
+      <p class="w3-text-grey">5 pcs Bird's eye chili, sliced</p>
+      <p class="w3-text-grey">4 cloves Shallots, sliced</p>
+      <p class="w3-text-grey">1 tsp Sugar</p>
+      <p class="w3-text-grey">1/3 tsp Salt</p>
+      <p class="w3-text-grey">1/2 tsp Powdered stock</p>
+      <p class="w3-text-grey">1 tsp Shrimp paste powder</p>
+      <p class="w3-text-grey">Cooking Oil</p><br>
+    
+      <h4>How to Make</h4>
+      <p class="w3-text-grey">Mix all ingredients, except the fish, in a clay mortar. Then bake the mortar.</p>
+      <p class="w3-text-grey">Once it starts to boil, add the fish. Cook until done, turning the fish over so it cooks evenly.</p>
+      <p class="w3-text-grey">Lift and serve</p><br>   
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <img src="https://img-global.cpcdn.com/steps/32b20e1f395bcfae/160x128cq80/gami-bawis-langkah-memasak-2-foto.webp" class="w3-round w3-image w3-opacity-min" alt="Recipe" style="width:100%">
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+<script>
+// --- FUNGSI DARK MODE ---
+
+// Fungsi untuk menerapkan tema (gelap atau terang)
+function applyTheme(theme) {
+  const body = document.body;
+  const darkModeIcon = document.getElementById('darkModeIcon');
+  if (theme === 'dark') {
+    body.classList.add('dark-mode');
+    darkModeIcon.classList.remove('fa-moon-o');
+    darkModeIcon.classList.add('fa-sun-o');
+  } else {
+    body.classList.remove('dark-mode');
+    darkModeIcon.classList.remove('fa-sun-o');
+    darkModeIcon.classList.add('fa-moon-o');
+  }
+};
+
+// Fungsi utama yang dipanggil saat tombol diklik
+function toggleDarkMode() {
+  let newTheme = 'light';
+  if (!document.body.classList.contains('dark-mode')) {
+    newTheme = 'dark';
+  }
+  // Simpan pilihan tema di localStorage
+  localStorage.setItem('theme', newTheme);
+  // Terapkan tema yang baru
+  applyTheme(newTheme);
+}
+
+// Cek apakah pengguna sudah punya pilihan tema saat halaman dimuat
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
+});
+</script>
+</body>
+</html>
