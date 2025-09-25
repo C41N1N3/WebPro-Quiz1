@@ -225,22 +225,16 @@ function toggleDarkMode() {
   if (!document.body.classList.contains('dark-mode')) {
     newTheme = 'dark';
   }
-  // Simpan pilihan tema di localStorage
   localStorage.setItem('theme', newTheme);
-  // Terapkan tema yang baru
   applyTheme(newTheme);
 }
 
-// Cek apakah pengguna sudah punya pilihan tema saat halaman dimuat
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme') || 'light';
   applyTheme(savedTheme);
 });
 
 
-// --- FUNGSI BAWAAN HALAMAN ---
-
-// Fungsi untuk Tabbed Menu
 function openMenu(evt, menuName) {
   var i, x, tablinks;
   x = document.getElementsByClassName("menu");
@@ -254,8 +248,6 @@ function openMenu(evt, menuName) {
   document.getElementById(menuName).style.display = "block";
   evt.currentTarget.firstElementChild.className += " w3-dark-grey";
 }
-
-// Otomatis klik tab 'Eat' saat halaman dimuat
 document.getElementById("myLink").click();
 </script>
 </body>
